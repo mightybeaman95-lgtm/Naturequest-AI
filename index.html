@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NatureQuest AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">🌿 NatureQuest</a>
+    <span class="tag">Touch Grass Challenge</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR OUTDOOR ADVENTURE STARTS HERE</p>
+      <h1>Less scrolling.<br /><span>More exploring.</span></h1>
+      <p>Discover nature, complete quests, and earn XP with your personal AI adventure buddy.</p>
+      <button id="generateBtn">✨ Generate my quest</button>
+      <div class="stats">
+        <div><strong id="xp">0</strong><span>Total XP</span></div>
+        <div><strong id="completed">0</strong><span>Quests completed</span></div>
+        <div><strong id="streak">0</strong><span>Day streak</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>🎯 Create your adventure</h2>
+      <label for="interest">What do you want to explore?</label>
+      <select id="interest">
+        <option value="nature">Nature and plants</option>
+        <option value="birds">Bird watching</option>
+        <option value="photography">Nature photography</option>
+        <option value="walking">Walking and exploring</option>
+        <option value="environment">Helping the environment</option>
+      </select>
+
+      <label for="difficulty">Choose difficulty</label>
+      <select id="difficulty">
+        <option value="easy">Easy · 10–15 minutes</option>
+        <option value="medium">Medium · 20–30 minutes</option>
+        <option value="hard">Challenging · 30–45 minutes</option>
+      </select>
+
+      <label for="location">Where will you explore?</label>
+      <select id="location">
+        <option value="garden">Garden</option>
+        <option value="park">Public park</option>
+        <option value="campus">College campus</option>
+        <option value="neighborhood">Neighborhood</option>
+      </select>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <h2>🧭 Your quest</h2>
+        <span class="tag">AI powered</span>
+      </div>
+      <div id="questResult" aria-live="polite">
+        <div class="empty">
+          <div class="big-icon">🌳</div>
+          <h3>Your next adventure awaits</h3>
+          <p>Choose your interests above and generate your first quest.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>🏆 Nature explorer badges</h2>
+      <div class="badges">
+        <div class="badge-card"><span>🌱</span><strong>First Steps</strong><small>Complete 1 quest</small></div>
+        <div class="badge-card"><span>📸</span><strong>Nature Spotter</strong><small>Complete 3 quests</small></div>
+        <div class="badge-card"><span>🌳</span><strong>Earth Friend</strong><small>Complete 5 quests</small></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>📓 Nature journal</h2>
+      <label for="journal">What did you notice outdoors today?</label>
+      <textarea id="journal" placeholder="I noticed three different kinds of leaves..."></textarea>
+      <button id="saveJournal" class="secondary">Save journal entry</button>
+      <p id="journalStatus" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>Made for the planet 🌍 · Step outside, discover more.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
